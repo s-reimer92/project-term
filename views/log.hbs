@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Login</title>
+
+    {{> style}}
+</head>
+
+<body>
+    <h1>MyMovieList</h1>
+    <img class="icon" id="logIcon" src='film-icon.png'/>
+    <div class="userAuth" id="registerDiv" style="left:30vw;">
+        <form id="register-form" enctype="application/json" action="/signup" method="post">
+            <input class="userAuthForm" id="registerName" name="registerName" type="text" placeholder="Username" value="" />
+            <input class="userAuthForm" id="registerPw" name="registerPw" type="password" placeholder="Password" value="" />
+            <input class="userAuthForm" id="confirmPw" name="confirmPw" type="password" placeholder="Confirm Password" value="" />
+            <input class="userAuthForm" id="register_button" type="submit" value="Register" />
+            {{{signupMsg}}}
+        </form>
+    </div>
+    <div class="userAuth" id="loginDiv" style="right:30vw;">
+        <form id="login-form" enctype="application/json" action="/login" method="post">
+            <input class="userAuthForm" id="loginName" name="loginName" type="text" placeholder="Username" value="" />
+            <input class="userAuthForm" id="loginPw" name="loginPw" type="password" placeholder="Password" value="" />
+            <input class="userAuthForm" id="login_button" type="submit" value="Login"" />
+            {{{loginMsg}}}
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search</title>
+
+    {{> style}}
+</head>
+
+<body>
+    {{> navigation}}
+    <div class="contentDiv" id="searchPage">
+        <h1>Search TheMovieDB</h1>
+        <form id="search-form" enctype="application/json" action="/search" method="post">
+        	<input class="searchForm" id="searchQuery" name="searchQuery" type="text" placeholder="Enter Movie Title" value="" />
+        	<input class="searchForm" id="searchButton" type="submit" value="Search"" />
+        </form>
+        <div class="results" id="searchResults">
+        	{{{parsed}}}
+        </div>
+    </div>
+</body>
+
+</html>

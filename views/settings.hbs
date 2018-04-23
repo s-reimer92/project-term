@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Settings</title>
+    {{> style}}
+</head>
+
+<body>
+    {{> navigation}}
+    <div class="contentDiv" id="setPage">
+        <h1>Settings</h1>
+        <div class="setClass" id="changeInfoDiv">
+        	<h2>Enter a new username and/or a new password. Your old password is required to change either.</h2><br>
+        	<div id="formDiv">
+	            <form id="changeinfo-form" enctype="application/json" action="/settings" method="post">
+	            	<input class="changeInfoForm" id="newUsername" name="newUsername" type="text" placeholder="New Username" value="" /><br><br>
+	            	<input class="changeInfoForm" id="newPw" name="newPw" type="password" placeholder="New Password" value="" />
+	                <input class="changeInfoForm" id="confirmNewPw" name="confirmNewPw" type="password" placeholder="New Password (Confirm)" value="" /><br><br>
+	                <input class="changeInfoForm" id="oldPw" name="oldPw" type="password" placeholder="Old Password" value="" />
+	                <input class="changeInfoForm" id="confirmOldPw" name="confirmOldPw" type="password" placeholder="Old Password (Confirm)" value="" /><br><br>
+	                <input class="changeInfoForm" id="submit_button" type="submit" value="Submit" />
+	                {{{settingsMsg}}}
+	            </form>
+	        </div>
+        </div>
+    </div>
+</body>
+
+</html>
