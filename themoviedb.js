@@ -36,7 +36,7 @@ var parseResults = (results) => {
             overview = overview.substring(0, 600) + "..";
         parsed += `
         <div style='background-color:#FFFCF8; width:100%; height:20%; text-align:left; border-top:1px solid black; '>
-            <img src='http://image.tmdb.org/t/p/w92/${results[i].poster_path}' style='left=1vw; margin:5px; vertical-align: top; display: inline; float: left'/>
+            <img src='http://image.tmdb.org/t/p/w92/${results[i].poster_path}' style='left=1vw; margin:5px; height:90%; vertical-align: top; display: inline; float: left'/>
             <div style='width:100%; height:10%; vertical-align: top; display: inline'>
                 <strong>Title</strong>: ${results[i].title}<br>
                 <strong>Overview</strong>: ${overview}<br>
@@ -63,7 +63,7 @@ var generateFavorites = (favorites) => {
             overview = overview.substring(0, 600) + "..";
         generated += `
         <div style='background-color:#FFFCF8; width:100%; height:20%; text-align:left; border-top:1px solid black; '>
-            <img src='http://image.tmdb.org/t/p/w92/${favorites[i].poster_path}' style='left=1vw; margin:5px; vertical-align: top; display: inline; float: left'/>
+            <img src='http://image.tmdb.org/t/p/w92/${favorites[i].poster_path}' style='left=1vw; margin:5px; height:90%; vertical-align: top; display: inline; float: left'/>
             <div style='width:100%; height:10%; vertical-align: top; display: inline'>
                 <strong>Title</strong>: ${favorites[i].title}<br>
                 <strong>Overview</strong>: ${overview}<br>
